@@ -1,0 +1,52 @@
+{
+  "name": "ant-design-extends",
+  "version": "1.0.0",
+  "description": "ant design extension components",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test",
+    "commit": "git-cz"
+  },
+  "author": "liyunkun",
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "echo husky pre-commit && exit 1"
+    }
+  },
+  "lint-staged": {
+    "components/**/*.ts?(x)": [
+      "prettier --writer",
+      "eslint --fix",
+      "git add"
+    ],
+    "components/**/*.less": [
+      "stylelint --syntax less --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "antd": "^4.14.1",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "@types/react": "16",
+    "@types/react-dom": "^17.0.3",
+    "@umijs/fabric": "^2.5.7",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^5.2.0",
+    "prettier": "^2.2.1",
+    "react": "16",
+    "react-dom": "16",
+    "typescript": "^4.2.3"
+  }
+}
