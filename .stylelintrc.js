@@ -1,4 +1,3 @@
-/**
- * @file: file
- * @author: liyunkun(liyunkun@baidu.com)
- */
+module.exports = {
+    extends: [require.resolve('@umijs/fabric/dist/stylelint')],
+};

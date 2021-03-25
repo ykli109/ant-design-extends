@@ -4,7 +4,10 @@
   "description": "ant design extension components",
   "main": "index.js",
   "scripts": {
-    "test": "yarn test",
+    "dev": "docz dev",
+    "start": "yarn dev",
+    "build:doc": "rimraf doc-site && docz build",
+    "preview:doc": "docz serve",
     "commit": "git-cz"
   },
   "author": "liyunkun",
@@ -41,11 +44,15 @@
     "@umijs/fabric": "^2.5.7",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
+    "docz": "^2.3.1",
+    "gatsby-plugin-less": "^5.1.0",
     "husky": "4",
+    "less": "^4.1.1",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "react": "16",
     "react-dom": "16",
+    "rimraf": "^3.0.2",
     "typescript": "^4.2.3"
   }
 }
